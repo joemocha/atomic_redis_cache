@@ -89,7 +89,7 @@ module AtomicRedisCache
 
     def redis
       raise ArgumentError.new('AtomicRedisCache.redis must be set') unless @redis
-      @redis.respond_to?(:call) ? @redis.call : @redis
+      @redis
     end
     private :redis
   end
